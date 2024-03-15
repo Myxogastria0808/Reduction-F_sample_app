@@ -1,15 +1,22 @@
 'use strict';
 
 const display = document.getElementById("display");
-let number = 0;
+let number = null;
 let numberTmp = null;
-let operator = "None";
+let operator = "None"
 let point = null;
-display.innerText = String(number);
+display.innerText = String(0);
 
-const operator_list = ["plus", "minus", "multiplication", "division"];
+const operator_list = ["plus", "minus", "multiplication", "division", "equal"];
 
 const onClickNumber = (x) => {
+    if (operator == operator_list[4]) {
+        numberTmp = null;
+        operator = "None"
+    };
+    if (number == null) {
+        number = 0
+    };
     if (point == null) {
         number = number * 10 + x;
     } else {
@@ -20,15 +27,17 @@ const onClickNumber = (x) => {
 };
 
 const onClickClear = () => {
-    number = 0;
+    number = null;
     numberTmp = null;
     operator = "None";
     point = null;
-    display.innerText = String(number);
+    display.innerText = String(0);
 };
 
 const onClickOperator = (x) => {
-    if (numberTmp == null) {
+    if (number == null) {
+        ;
+    } else if (numberTmp == null) {
         numberTmp = number
     } else {
         if (operator == operator_list[0]) {
@@ -41,12 +50,9 @@ const onClickOperator = (x) => {
             numberTmp /= number
         };
     };
-    number = 0;
-    point = null;
     display.innerText = String(numberTmp);
-    if (x == "None") {
-        numberTmp = null
-    };
+    number = null;
+    point = null;
     operator = x;
 };
 
@@ -62,12 +68,10 @@ for (let i = 0; i < 10; i++) {
     buttonNumber.addEventListener("click", onClickNumber.bind(null, i));
 };
 
-document.getElementById("button-clear").addEventListener("click", onClickClear);
-document.getElementById("button-equal").addEventListener("click", onClickOperator.bind(null, "None"));
-
-for (let i = 0; i < 4; i++) {
+for (let i = 0; i < 5; i++) {
     let buttonOperation = document.getElementById("button-" + operator_list[i]);
     buttonOperation.addEventListener("click", onClickOperator.bind(null, operator_list[i]));
 };
 
 document.getElementById("button-point").addEventListener("click", onClickPoint);
+document.getElementById("button-clear").addEventListener("click", onClickClear);
