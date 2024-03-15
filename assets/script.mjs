@@ -1,14 +1,11 @@
 'use strict';
 
-type NumberOrNull = number | null;
-type StringOrNull = string | null;
-
-const display = document.getElementById("display")!;
-display.innerText = "0";
-let number: NumberOrNull = null;
-let numberTmp: NumberOrNull = null;
-let operator: StringOrNull = null;
-let point: NumberOrNull = null;
+const display = document.getElementById("display");
+let number = null;
+let numberTmp = null;
+let operator = "None"
+let point = null;
+display.innerText = String(0);
 
 const operator_list = ["plus", "minus", "multiplication", "division", "equal"];
 
@@ -32,9 +29,9 @@ const onClickNumber = (x) => {
 const onClickClear = () => {
     number = null;
     numberTmp = null;
-    operator = null;
+    operator = "None";
     point = null;
-    display.innerText = "0";
+    display.innerText = String(0);
 };
 
 const onClickOperator = (x) => {
@@ -67,12 +64,14 @@ const onClickPoint = () => {
 };
 
 for (let i = 0; i < 10; i++) {
-    document.getElementById("button-" + String(i))!.addEventListener("click", onClickNumber.bind(null, i));
+    let buttonNumber = document.getElementById("button-" + String(i));
+    buttonNumber.addEventListener("click", onClickNumber.bind(null, i));
 };
 
 for (let i = 0; i < 5; i++) {
-    document.getElementById("button-" + operator_list[i])!.addEventListener("click", onClickOperator.bind(null, operator_list[i]));
+    let buttonOperation = document.getElementById("button-" + operator_list[i]);
+    buttonOperation.addEventListener("click", onClickOperator.bind(null, operator_list[i]));
 };
 
-document.getElementById("button-point")!.addEventListener("click", onClickPoint);
-document.getElementById("button-clear")!.addEventListener("click", onClickClear);
+document.getElementById("button-point").addEventListener("click", onClickPoint);
+document.getElementById("button-clear").addEventListener("click", onClickClear);
