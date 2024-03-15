@@ -1,86 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="styles.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sample App</title>
-    <script src="./main.js" defer></script>
-  </head>
+    <head>
+        <!------------------og setting----------------------->
+        <meta name="description" content="電卓アプリです。" />
+        <meta name="keyword" content="html css javascript 電卓 電卓アプリ" />
+        <meta property="og:description" content="電卓アプリです。" />
+        <meta property="og:title" content="電卓アプリ" />
+        <meta property="og:image:width" content="650" />
+        <meta property="og:image:height" content="732" />
+        <meta property="og:image" content="./assets/og-img.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://redaction-f.github.io/sample_app/" />
+        <!------------------meta setting----------------------->
+        <link rel="icon" href="./assets/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="./assets/styles.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Sample App</title>
+        <script src="./assets/script.mjs" defer></script>
+    </head>
 
-  <body>
-    <div class="title">
-      電卓
-    </div>
+    <body>
+        <div class="title">電卓</div>
 
-    <div id="display">
-      
-    </div>
+        <div id="display"></div>
 
-    <div class="button-wrappar">
-      <div class="button-dummy"></div>
-      <button id="button-1">
-        1
-      </button>
-      <button id="button-2">
-        2
-      </button>
-      <button id="button-3">
-        3
-      </button>
-      <button id="button-division">
-        ÷
-      </button>
-    </div>
-    <div class="button-wrappar">
-      <div class="button-dummy"></div>
-      <button id="button-4">
-        4
-      </button>
-      <button id="button-5">
-        5
-      </button>
-      <button id="button-6">
-        6
-      </button>
-      <button id="button-multiplication">
-        ×
-      </button>
-    </div>
-    <div class="button-wrappar">
-      <div class="button-dummy"></div>
-      <button id="button-7">
-        7
-      </button>
-      <button id="button-8">
-        8
-      </button>
-      <button id="button-9">
-        9
-      </button>
-      <button id="button-minus">
-        -
-      </button>
-    </div>
-    <div class="button-wrappar">
-      <button id="button-clear">
-        C
-      </button>
-      <button id="button-0">
-        0
-      </button>
-      <button id="button-point">
-        .
-      </button>
-      <button id="button-equal">
-        =
-      </button>
-      <button id="button-plus">
-        +
-      </button>
-    </div>
-  </body>
+        <div class="button-wrappar">
+            <div class="button-dummy"></div>
+            <button id="button-1">1</button>
+            <button id="button-2">2</button>
+            <button id="button-3">3</button>
+            <button id="button-division">÷</button>
+        </div>
+        <div class="button-wrappar">
+            <div class="button-dummy"></div>
+            <button id="button-4">4</button>
+            <button id="button-5">5</button>
+            <button id="button-6">6</button>
+            <button id="button-multiplication">×</button>
+        </div>
+        <div class="button-wrappar">
+            <div class="button-dummy"></div>
+            <button id="button-7">7</button>
+            <button id="button-8">8</button>
+            <button id="button-9">9</button>
+            <button id="button-minus">-</button>
+        </div>
+        <div class="button-wrappar">
+            <button id="button-clear">C</button>
+            <button id="button-0">0</button>
+            <button id="button-point">.</button>
+            <button id="button-equal">=</button>
+            <button id="button-plus">+</button>
+        </div>
+    </body>
 </html>
