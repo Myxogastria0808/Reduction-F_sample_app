@@ -22,7 +22,7 @@
   font-size: 40px;
   text-align: left;
 
-  width: 400px;
+  max-width: 400px;
   background-color: #000000;
   padding: 10px;
   margin: 20px auto;
@@ -79,7 +79,8 @@ button:active {
 
 @media screen and(max-width: 480px) {
   #display {
-    max-width: max-content;
+    width: max-content;
+    background-color: red;
   }
 }
 
