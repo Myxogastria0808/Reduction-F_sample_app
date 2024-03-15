@@ -60,6 +60,7 @@ button:active {
 .button-dummy {
   display: inline-block;
 
+  background-color: red;
   width: 60px;
   height: 60px;
   padding: 0px;
@@ -67,20 +68,20 @@ button:active {
 }
 
 .button-wrappar {
-  display: flex;
+  /* display: flex; */
+  text-align: center;
   
   font-size: 0px;
   
   user-select: none;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   margin: 0px auto;
 }
 
 @media screen and(max-width: 480px) {
   #display {
     width: max-content;
-    background-color: red;
   }
 }
 
