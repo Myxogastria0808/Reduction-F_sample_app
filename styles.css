@@ -23,7 +23,6 @@
   text-align: left;
 
   width: 400px;
-  max-width: max-content;
   background-color: #000000;
   padding: 10px;
   margin: 20px auto;
@@ -76,4 +75,14 @@ button:active {
   justify-content: center;
   align-items: center;
   margin: 0px auto;
+}
+
+@media screen and(max-width: 480px) {
+  #display {
+    max-width: max-content;
+  }
+}
+
+@media screen and(min-width: 1280px) {
+
 }
